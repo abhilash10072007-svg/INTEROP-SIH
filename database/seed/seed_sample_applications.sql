@@ -1,0 +1,13 @@
+-- Run this AFTER you have at least one real citizen row (created via
+-- /auth/pre-register + /auth/callback) and the workflows above are seeded.
+-- Replace the placeholder UUIDs before running.
+
+-- insert into applications (citizen_id, workflow_id, current_step, status, data_json, step_history)
+-- values (
+--     '<citizen_id_here>',
+--     (select id from workflows where service_name = 'Driving License Renewal'),
+--     1,
+--     'in_progress',
+--     '{}'::jsonb,
+--     '[]'::jsonb
+-- );
